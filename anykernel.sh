@@ -5,7 +5,6 @@
 # global properties
 properties() { '
 kernel.string=Kernel by Aqua Lyudmila (FranklinAzriel) @ aquacommunity.org
-do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
@@ -14,7 +13,6 @@ supported.versions=
 supported.patchlevels=
 supported.vendorpatchlevels=
 '; } # end properties
-
 
 ### AnyKernel install
 ## boot files attributes
