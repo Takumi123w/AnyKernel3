@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=Kernel made by TakuruKagami from t.me/a01coredev
+kernel.string="Kernel made by TakuruKagami from t.me/a01coredev"
 do.devicecheck=0
 do.modules=0
 do.systemless=1
@@ -23,7 +23,12 @@ set_perm_recursive 0 0 750 750 $RAMDISK/init* $RAMDISK/sbin;
 } # end attributes
 
 # boot shell variables
+if [ -e /dev/block/platform/bootdevice/by-name/boot ]
+then
+BLOCK=/dev/block/platform/bootdevice/by-name/boot;
+else
 BLOCK=/dev/block/by-name/boot;
+fi
 IS_SLOT_DEVICE=0;
 RAMDISK_COMPRESSION=auto;
 PATCH_VBMETA_FLAG=auto;
